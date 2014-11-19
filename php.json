@@ -1,0 +1,82 @@
+{  
+   "type":"php",
+   "provider":"apache",
+   "host":"apachestratos.org",
+   "displayName":"PHP",
+   "description":"PHP Cartridge",
+   "version":"5.0",
+   "multiTenant":"false",
+   "portMapping":[  
+      {  
+         "protocol":"http",
+         "port":"80",
+         "proxyPort":"80"
+      },
+      {  
+         "protocol":"https",
+         "port":"443",
+         "proxyPort":"443"
+      }
+   ],
+   "deployment":{  
+
+   },
+   "iaasProvider":[  
+      {  
+         "type":"openstack",
+         "imageId":"RegionOne/1cd412c1-54ce-405f-9894-ce1387073c6c",
+         "networkInterfaces":[  
+            {  
+               "name":"eth0",
+               "networkUuid":"512e1f54-1e85-4dac-b2e6-f0b30fc552cf",
+	       "floatingNetworks":[
+		  {
+			"name":"externalOne",
+                        "networkUuid":"ba667f72-7ba8-4b24-b360-b74a0211c83c"
+		]
+                
+            },
+            {  
+               "name":"eth1",
+               "networkUuid":"68aab21d-fc9a-4c2f-8d15-b1e41f6f7bb8"
+            },
+            {  
+               "name":"eth2",
+               "networkUuid":"b55f009a-1cc6-4b17-924f-4ae0ee18db5e",
+	       "floatingNetworks":[
+		  {
+			"name":"externalThree",
+			"floatingIP" : "192.168.17.227"
+		  }
+		]
+            },
+            {  
+               "name":"eth3",
+               "networkUuid":"d343d343-1cc6-4b17-924f-4ae0ee18db5e",
+	       "floatingNetworks":[
+		  {
+			"name":"externalThree",  
+                        "networkUuid":"ba667f72-7ba8-4b24-b360-b74a0211c83c",
+			"floatingIP" : "192.168.17.227"
+		  }
+		]
+            }
+         ],
+         "maxInstanceLimit":"4",
+         "property":[  
+            {  
+               "name":"instanceType",
+               "value":"RegionOne/15c3065c-462c-4977-9143-094d63d1c2c7"
+            },
+            {  
+               "name":"keyPair",
+               "value":"cisco"
+            },
+            {  
+               "name":"autoAssignIp",
+               "value":"false"
+            }
+         ]
+      }
+   ]
+}
