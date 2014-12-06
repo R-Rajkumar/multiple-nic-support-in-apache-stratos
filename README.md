@@ -56,7 +56,7 @@ A sample cartridge definition
 -----------------------------
 An example network interfaces section of the cartridge definition looks like below;
 
-~~~
+~~~json
  "networkInterfaces":[
      {
         "name":"eth0",
@@ -126,7 +126,7 @@ An example network interfaces section of the cartridge definition looks like bel
 Supported features in detail
 ----------------------------
 1. Floating networks are optional.
-    ```
+    ```json
     {
         "name":"eth0",
         "networkUuid":"68aab21d-fc9a-4c2f-8d15-b1e41f6f7bb8"
